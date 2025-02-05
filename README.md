@@ -14,9 +14,8 @@ AWS tips
 10.  In AWS console, Choose Singapore arew= region.
 
 # Create Key Pair
-1. Using the AWS Management Console:
-a. Go to the EC2 Dashboard in the AWS Management Console.
-b. In the left navigation pane, under "Network & Security", click on "Key Pairs".
-c. Click the "Create key pair" button at the top of the page.
-d. Enter mykeypair then click Create Key Pair.
+1. Using the AWS Management conosle, Go to the EC2 Dashboard in the AWS Management Console.
+2. In the left navigation pane, under "Network & Security", click on "Key Pairs".
+3. Click the "Create key pair" button at the top of the page.
+4. Enter mykeypair then click Create Key Pair.
    
