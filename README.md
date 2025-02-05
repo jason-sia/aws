@@ -11,4 +11,5 @@ AWS tips
 7. Enter Billing information, card details then agree and continue.
 8.  confirm your identity, enter mobile number, send AWS SMS code, agree and continue
 9.  Select support plan, choose basic support -free then complete signup
+10.  In AWS console, Choose Singapore arew= region.
    
