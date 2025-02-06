@@ -99,7 +99,7 @@ echo "Snapshots associated with AMI $ami_id have been renamed to $ami_name"
 
 ```
 
-# How to get AWS Access Key
+# How to get AWS Access Key/Secret
 1. Sign in to the AWS Management Console.
 2. Click on your account name in the top right corner, then click "Security credentials".
 3. If prompted, click "Continue to Security credentials".
