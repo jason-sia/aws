@@ -51,15 +51,15 @@ Creating an Amazon Machine Image (AMI) from an existing Amazon EC2 instance is a
 5. Create Image: Click Create Image to initiate the process
 
 For automation, you can use a Bash script with AWS CLI to create an AMI. Here is a sample script:
-#!/bin/bash
-'# Prompt for the EC2 Instance Name and AMI Name
+```#!/bin/bash
+# Prompt for the EC2 Instance Name and AMI Name
 read -p "Enter the EC2 Instance Name: " instance_name
 read -p "Enter the AMI Name: " ami_name
 
-'# Find the instance ID based on the given instance name
+# Find the instance ID based on the given instance name
 instance_id=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=$instance_name" --query 'Reservations[*].Instances[*].InstanceId' --output text)
 
-'# Check if the instance ID was found
+# Check if the instance ID was found
 if [ -z "$instance_id" ]; then
 echo "No instance found with name: $instance_name"
 exit 1
@@ -67,31 +67,33 @@ fi
 
 echo "Creating AMI from instance: $instance_id"
 
-'# Create an image (AMI) from the instance and capture the AMI ID
+# Create an image (AMI) from the instance and capture the AMI ID
 ami_id=$(aws ec2 create-image --instance-id $instance_id --name "$ami_name" --query 'ImageId' --output text)
 echo "AMI creation initiated for instance $instance_id with AMI ID $ami_id"
 
-'# Wait for the AMI to be available
+# Wait for the AMI to be available
 echo "Waiting for AMI to become available..."
 aws ec2 wait image-available --image-ids $ami_id
 
-'# Additional delay to ensure snapshots are registered
+# Additional delay to ensure snapshots are registered
 echo "Waiting for snapshots to be registered..."
 sleep 60
 
-'# Retrieve the snapshot IDs from the block device mappings of the AMI
+# Retrieve the snapshot IDs from the block device mappings of the AMI
 snapshot_ids=$(aws ec2 describe-images --image-ids $ami_id --query 'Images[*].BlockDeviceMappings[*].Ebs.SnapshotId' --output text)
 
-'# Check if there are snapshots to rename
+# Check if there are snapshots to rename
 if [ -z "$snapshot_ids" ]; then
 echo "No snapshots found for AMI: $ami_id"
 exit 1
 fi
 
-'# Rename each snapshot to use the AMI name
+# Rename each snapshot to use the AMI name
 for snapshot_id in $snapshot_ids; do
 echo "Renaming snapshot: $snapshot_id to $ami_name"
 aws ec2 create-tags --resources $snapshot_id --tags Key=Name,Value="$ami_name"
 done
 
 echo "Snapshots associated with AMI $ami_id have been renamed to $ami_name"
+
+```
