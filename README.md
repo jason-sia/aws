@@ -1,4 +1,4 @@
-# aws
+# Amazon Web Services (AWS)
 AWS tips
 
 # Create AWS Free Account
