@@ -35,3 +35,8 @@ AWS tips
 1. Go to the EC2 Dashboard in the AWS Management Console.
 2. In the left navigation pane, under "Network & Security", click on "Security Groups".
 3. You'll see a list of your Security Groups. The "Security group ID" column shows the IDs in the format "sg-xxxxxxxxxxxxxxxxx".
+
+# How to get the subnet ID?
+1. Go to the VPC Dashboard in the AWS Management Console.
+2. In the left navigation pane, click on "Subnets".
+3. You'll see a list of your Subnets. The "Subnet ID" column shows the IDs in the format "subnet-xxxxxxxxxxxxxxxxx".
