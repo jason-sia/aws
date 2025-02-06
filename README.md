@@ -98,3 +98,22 @@ done
 echo "Snapshots associated with AMI $ami_id have been renamed to $ami_name"
 
 ```
+
+# How to get AWS Access Key
+1. Sign in to the AWS Management Console.
+2. Click on your account name in the top right corner, then click "Security credentials".
+3. If prompted, click "Continue to Security credentials".
+4. Scroll down to the "Access keys" section.
+5. Click "Create New Access Key".
+6. You'll see a message saying "Your security credentials have been created successfully". Click "Show Access Key" to reveal the access key ID and secret access key.
+7. Download the key file and store it securely. This is the only time you'll be able to view or download the secret access key.
+
+For an IAM user:
+
+1. Sign in to the AWS Management Console.
+2. Navigate to the IAM dashboard.
+3. Click on "Users" in the left navigation pane.
+4. Select the IAM user for which you want to create an access key.
+5. Go to the "Security credentials" tab.
+6. Under "Access keys", click "Create access key".
+7. Download the key file or copy the access key ID and secret access key.
