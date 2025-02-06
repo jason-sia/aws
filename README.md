@@ -18,4 +18,10 @@ AWS tips
 2. In the left navigation pane, under "Network & Security", click on "Key Pairs".
 3. Click the "Create key pair" button at the top of the page.
 4. Enter mykeypair then click Create Key Pair.
+
+# How to Get AMI ID?
+1. Go to the EC2 Dashboard in the AWS Management Console.
+2. Click on "Launch Instance".
+3. In the "Choose an Amazon Machine Image (AMI)" page, look for "Amazon Linux 2 AMI (HVM) - Kernel 5.10, SSD Volume Type" under the "Quick Start" section.
+4. You'll see the AMI ID next to the AMI name. It will be in the format "ami-xxxxxxxxxxxxxxxxx".
    
