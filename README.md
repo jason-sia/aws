@@ -51,7 +51,8 @@ Creating an Amazon Machine Image (AMI) from an existing Amazon EC2 instance is a
 5. Create Image: Click Create Image to initiate the process
 
 For automation, you can use a Bash script with AWS CLI to create an AMI. Here is a sample script:
-```#!/bin/bash
+```
+#!/bin/bash
 # Prompt for the EC2 Instance Name and AMI Name
 read -p "Enter the EC2 Instance Name: " instance_name
 read -p "Enter the AMI Name: " ami_name
