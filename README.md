@@ -25,3 +25,9 @@ AWS tips
 3. In the "Choose an Amazon Machine Image (AMI)" page, look for "Amazon Linux 2 AMI (HVM) - Kernel 5.10, SSD Volume Type" under the "Quick Start" section.
 4. You'll see the AMI ID next to the AMI name. It will be in the format "ami-xxxxxxxxxxxxxxxxx".
    
+# Where to find key-pair name?
+1. Go to the EC2 Dashboard in the AWS Management Console.
+2. In the left navigation pane, under "Network & Security", click on "Key Pairs".
+3. You'll see a list of your existing key pairs. The names are listed in the "Key pair name" column.
+4. If you don't have a key pair, you can create one by clicking the "Create key pair" button at the top of the page.
+
